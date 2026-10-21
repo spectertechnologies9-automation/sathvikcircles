@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js at-top">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sathvik Chidanand — Founder &amp; CEO, Circles IN</title>
+<meta name="description" content="Sathvik Chidanand — founder and CEO of Circles IN, a social events platform for discovering local events and meeting like-minded people. Computer Science engineer (RV College of Engineering) and Cornell University Engineering Management graduate, based in Bengaluru.">
+<meta name="author" content="Sathvik Chidanand">
+<meta name="theme-color" content="#0E0E10">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Sathvik Chidanand — Founder, Circles IN">
+<meta property="og:description" content="Entrepreneur and technology product builder. Founder &amp; CEO of Circles IN — find your circle, live your moment.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sathvik Chidanand — Founder, Circles IN">
+<meta name="twitter:description" content="Entrepreneur and technology product builder. Founder &amp; CEO of Circles IN.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230E0E10'/%3E%3Ccircle cx='32' cy='32' r='18' fill='none' stroke='%23EDEBE5' stroke-width='5'/%3E%3Ccircle cx='45' cy='19' r='6' fill='%235B5BFF'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;500&display=swap">
+<script>document.documentElement.classList.replace('no-js','js');</script>
+
+<style>
+/* =========================================================
+   TOKENS
+   ========================================================= */
+:root{
+  --bg:#EDEBE5;
+  --bg-2:#E3E0D8;
+  --ink:#0E0E10;
+  --ink-2:#18181B;
+  --on-dark:#EDEBE5;
+  --accent:#3B3BF0;           /* cobalt — on paper */
+  --accent-lt:#8E8DFF;        /* cobalt — on ink */
+  --muted:rgba(14,14,16,.6);
+  --line:rgba(14,14,16,.16);
+  --muted-dark:rgba(237,235,229,.6);
+  --line-dark:rgba(237,235,229,.16);
+
+  --f-display:"Archivo","Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+
+  --gut:clamp(16px,4vw,56px);
+  --sec:clamp(84px,12vw,190px);
+  --gap:clamp(16px,2.4vw,36px);
+
+  --fs-meta:clamp(.7rem,.66rem + .18vw,.8rem);
+  --fs-body:clamp(1rem,.96rem + .22vw,1.12rem);
+  --fs-lead:clamp(1.2rem,.95rem + 1.1vw,1.9rem);
+  --fs-h2:clamp(2.7rem,1rem + 8.6vw,10rem);
+  --fs-h3:clamp(1.45rem,1rem + 2vw,3rem);
+
+  --ease:cubic-bezier(.16,1,.3,1);
+  --ease-io:cubic-bezier(.65,0,.35,1);
+  --t-fast:.35s;
+  --t:.9s;
+  --t-slow:1.4s;
+  --border:1px solid var(--line);
+}
+
+/* =========================================================
+   BASE
+   ========================================================= */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-display);font-size:var(--fs-body);line-height:1.55;overflow-x:clip;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+html.lock,html.menu-open{overflow:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+h1,h2,h3,h4,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+::selection{background:var(--accent);color:var(--bg)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.dark :focus-visible,.cobalt :focus-visible,.hero :focus-visible{outline-color:var(--accent-lt)}
+.skip{position:fixed;left:12px;top:-60px;z-index:200;background:var(--accent);color:#fff;padding:10px 14px;font-family:var(--f-mono);font-size:.8rem;transition:top .2s}
+.skip:focus{top:12px}
+
+.meta{font-family:var(--f-mono);font-size:var(--fs-meta);letter-spacing:.06em;text-transform:uppercase;line-height:1.5;font-weight:400}
+.dim{color:var(--muted)}
+.ac{color:var(--accent)}
+.dark .ac,.hero .ac{color:var(--accent-lt)}
+.dark{background:var(--ink);color:var(--on-dark);--line:var(--line-dark);--muted:var(--muted-dark);--stroke:var(--on-dark)}
+.paper-2{background:var(--bg-2)}
+.rep{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;border:1px solid currentColor;padding:1px 5px;vertical-align:.25em;margin-left:.4em;opacity:.7;white-space:nowrap}
+
+.sec{position:relative;padding:var(--sec) var(--gut)}
+.wrap{max-width:1680px;margin:0 auto}
+
+.sec-head{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(14px,3vw,48px);align-items:end;margin-bottom:clamp(44px,7vw,110px)}
+.sec-num{font-weight:800;font-stretch:125%;font-size:clamp(4.2rem,1.5rem + 12vw,15rem);line-height:.74;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px var(--stroke,var(--ink));user-select:none}
+.sec-kicker{display:flex;gap:1.2em;flex-wrap:wrap;margin-bottom:.9em}
+.h2{font-size:var(--fs-h2);font-weight:800;font-stretch:72%;line-height:.86;letter-spacing:-.02em;text-transform:uppercase;overflow-wrap:break-word}
+.dot{display:inline-block;width:.16em;height:.16em;border-radius:50%;background:var(--accent);margin-left:.05em;vertical-align:baseline}
+.dark .dot,.hero .dot{background:var(--accent-lt)}
+
+.btn{display:inline-flex;align-items:center;gap:.9em;padding:1.05em 1.5em;border:1px solid currentColor;font-family:var(--f-mono);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;min-height:48px;transition:background var(--t-fast),color var(--t-fast),border-color var(--t-fast)}
+.btn .arr{display:inline-block;transition:transform .5s var(--ease)}
+.btn:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn:hover .arr{transform:translateX(6px)}
+.btn.solid{background:var(--on-dark);color:var(--ink);border-color:var(--on-dark)}
+.btn.solid:hover{background:var(--accent-lt);border-color:var(--accent-lt);color:var(--ink)}
+.ul{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .5s var(--ease);padding-bottom:2px}
+.ul:hover,.ul:focus-visible{background-size:100% 1px}
+.magnetic{transition:translate .6s var(--ease)}
+
+/* =========================================================
+   REVEAL SYSTEM
+   ========================================================= */
+.js .rv{opacity:0;transform:translate3d(0,40px,0);transition:opacity var(--t) var(--ease),transform var(--t-slow) var(--ease);transition-delay:calc(var(--d,0) * 90ms)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv-x{opacity:0;transform:translate3d(-40px,0,0);transition:opacity var(--t) var(--ease),transform var(--t-slow) var(--ease);transition-delay:calc(var(--d,0) * 80ms)}
+.js .rv-x.in{opacity:1;transform:none}
+.js .rv-s{opacity:0;transform:scale(.9);transition:opacity 1s var(--ease),transform 1.4s var(--ease)}
+.js .rv-s.in{opacity:1;transform:none}
+.split .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.06em;margin-bottom:-.06em}
+.js .split .wi{display:inline-block;transform:translate3d(0,108%,0);transition:transform 1.1s var(--ease);transition-delay:calc(var(--i,0) * 55ms)}
+.js .split.in .wi{transform:none}
+.mask{overflow:hidden;position:relative}
+.js .mask{clip-path:inset(100% 0 0 0);transition:clip-path 1.3s var(--ease-io)}
+.js .mask.in{clip-path:inset(0 0 0 0)}
+.mask img{--s:1.08;scale:var(--s);translate:calc(var(--mx,0) * -14px) calc(var(--py,0px) + var(--my,0) * -14px);transition:scale 1.6s var(--ease)}
+.js .mask:not(.in) img{--s:1.2}
+
+/* =========================================================
+   LOADER
+   ========================================================= */
+.loader{display:none}
+.js .loader{position:fixed;inset:0;z-index:150;background:var(--ink);color:var(--on-dark);display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:var(--gut);padding-bottom:calc(var(--gut) + env(safe-area-inset-bottom));clip-path:inset(0 0 0 0);transition:clip-path 1.1s var(--ease-io)}
+.loader.done{clip-path:inset(0 0 100% 0)}
+.loader-count{font-weight:800;font-stretch:125%;font-size:clamp(4rem,14vw,12rem);line-height:.8;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.loader-count::after{content:"";display:inline-block;width:.14em;height:.14em;border-radius:50%;background:var(--accent-lt);margin-left:.06em}
+.loader-ring{position:absolute;right:var(--gut);top:var(--gut);width:clamp(44px,6vw,64px);aspect-ratio:1}
+.loader-ring circle{fill:none;stroke-width:2}
+.loader-ring .bg{stroke:var(--line-dark)}
+.loader-ring .fg{stroke:var(--accent-lt);stroke-dasharray:189;stroke-dashoffset:189;transform:rotate(-90deg);transform-origin:center}
+
+/* =========================================================
+   CURSOR (fine pointers only)
+   ========================================================= */
+.cursor{display:none}
+.has-cursor .cursor{display:block}
+.has-cursor,.has-cursor *{cursor:none!important}
+.c-dot,.c-ring{position:fixed;left:0;top:0;pointer-events:none;z-index:300;opacity:0;transition:opacity .3s}
+.cursor.vis .c-dot,.cursor.vis .c-ring{opacity:1}
+.c-dot{width:6px;height:6px;margin:-3px 0 0 -3px;background:#fff;border-radius:50%;mix-blend-mode:difference}
+.c-ring{width:88px;height:88px;margin:-44px 0 0 -44px;border:1px solid rgba(255,255,255,.9);border-radius:50%;mix-blend-mode:difference;display:grid;place-items:center;scale:.42;transition:scale .45s var(--ease),background .3s,border-color .3s,opacity .3s}
+.c-label{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:#fff;opacity:0;transition:opacity .2s}
+.cursor.link .c-ring{scale:.7}
+.cursor.labeled .c-ring{scale:1;background:var(--accent);border-color:var(--accent);mix-blend-mode:normal}
+.cursor.labeled .c-label{opacity:1}
+.cursor.labeled .c-dot{opacity:0}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+.progress{position:fixed;left:0;top:0;height:2px;width:100%;background:var(--accent-lt);transform-origin:0 50%;transform:scaleX(0);z-index:120}
+.site-head{position:fixed;inset:0 0 auto 0;z-index:90;display:flex;justify-content:space-between;align-items:flex-start;gap:24px;padding:18px var(--gut);padding-top:calc(18px + env(safe-area-inset-top));color:#fff;mix-blend-mode:difference;pointer-events:none}
+.site-head > *{pointer-events:auto}
+.brand{display:flex;flex-direction:column;gap:2px;line-height:1.25}
+.brand b{font-weight:800;font-stretch:125%;font-size:1.02rem;letter-spacing:-.01em}
+.nav{display:flex;align-items:flex-start;gap:clamp(18px,2.4vw,40px)}
+.nav ol{display:flex;gap:clamp(14px,1.6vw,28px)}
+.nav a{display:flex;align-items:flex-start;gap:.45em;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;padding:6px 0;position:relative}
+.nav .n{font-size:.62rem;opacity:.6}
+.nav ol a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+.nav ol a:hover::after,.nav ol a[aria-current="true"]::after{transform:scaleX(1);transform-origin:left}
+.nav-ext{border:1px solid currentColor;padding:6px 10px!important;border-radius:99px;transition:background .3s,color .3s}
+.nav-ext:hover{background:#fff;color:#000}
+.menu-btn{display:none;align-items:center;gap:10px;font-family:var(--f-mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;min-height:44px;padding:0 2px}
+.menu-btn .bars{width:26px;height:10px;position:relative}
+.menu-btn .bars i{position:absolute;left:0;right:0;height:1.5px;background:currentColor;transition:transform .5s var(--ease),top .5s var(--ease)}
+.menu-btn .bars i:first-child{top:0}.menu-btn .bars i:last-child{top:8.5px}
+.menu-open .menu-btn .bars i:first-child{top:4px;transform:rotate(45deg)}
+.menu-open .menu-btn .bars i:last-child{top:4px;transform:rotate(-45deg)}
+
+.sidecount{position:fixed;left:var(--gut);bottom:22px;z-index:80;display:flex;align-items:center;gap:12px;color:#fff;mix-blend-mode:difference;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;pointer-events:none;transition:opacity .5s}
+.at-top .sidecount{opacity:0}
+.on-cobalt .site-head,.on-cobalt .sidecount{mix-blend-mode:normal;color:#fff}
+.on-cobalt .nav-ext:hover{color:var(--accent)}
+.sc-bar{width:56px;height:1px;background:rgba(255,255,255,.35);position:relative;overflow:hidden}
+.sc-bar i{position:absolute;inset:0;background:#fff;transform-origin:0 50%;transform:scaleX(0)}
+
+.menu{position:fixed;inset:0;z-index:85;background:var(--ink);color:var(--on-dark);display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:96px var(--gut) calc(28px + env(safe-area-inset-bottom));overflow-y:auto;clip-path:circle(0% at calc(100% - 40px) 38px);visibility:hidden;transition:clip-path .9s var(--ease-io),visibility 0s .9s}
+.menu-open .menu{clip-path:circle(150% at calc(100% - 40px) 38px);visibility:visible;transition:clip-path .9s var(--ease-io),visibility 0s}
+.menu ol{display:flex;flex-direction:column;gap:clamp(2px,1vh,10px)}
+.menu li{overflow:hidden}
+.menu ol a{display:flex;align-items:baseline;gap:14px;font-weight:800;font-stretch:72%;text-transform:uppercase;font-size:clamp(2.5rem,12.5vw,5.6rem);line-height:.95;letter-spacing:-.01em;transform:translate3d(0,105%,0);transition:transform .8s var(--ease),color .3s;padding:2px 0}
+.menu ol a .n{font-family:var(--f-mono);font-weight:400;font-size:.8rem;letter-spacing:.08em;color:var(--accent-lt)}
+.menu ol a:hover{color:var(--accent-lt)}
+.menu-open .menu ol a{transform:none;transition-delay:calc(.25s + var(--i) * 60ms)}
+.menu-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;opacity:0;transition:opacity .5s}
+.menu-open .menu-foot{opacity:1;transition-delay:.6s}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{position:relative;min-height:100vh;min-height:100svh;background:var(--ink);color:var(--on-dark);overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto 1fr auto;gap:28px;padding:96px var(--gut) calc(28px + env(safe-area-inset-bottom));--line:var(--line-dark);--muted:var(--muted-dark)}
+.hero-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.hero > *:not(canvas){position:relative;z-index:1}
+.hero-top{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gap);align-items:start}
+.hero-read{text-align:right;font-variant-numeric:tabular-nums}
+.hero-name{align-self:center;display:flex;flex-direction:column;font-weight:800;font-stretch:70%;text-transform:uppercase;letter-spacing:-.015em;line-height:.8;pointer-events:none}
+.hero-pre{display:block;overflow:hidden;margin-bottom:1.2em}
+.hero-pre > span{display:inline-block}
+.hero-name .ln{display:block;overflow:hidden;padding-top:.04em}
+.hero-name .ln > span{display:inline-block}
+.hero-name .ln-2{padding-left:clamp(0px,8vw,200px)}
+.fit{display:inline-block;white-space:nowrap;font-size:clamp(3.2rem,16vw,15rem)}
+.js .hero-name .ln > span,.js .hero-pre > span,.js .hero-bottom > *,.js .hero-top > *{transform:translate3d(0,110%,0);opacity:0;transition:transform 1.3s var(--ease),opacity 1s var(--ease)}
+.js .hero-top > *,.js .hero-bottom > *{transform:translate3d(0,20px,0)}
+.loaded .hero-name .ln > span,.loaded .hero-pre > span,.loaded .hero-bottom > *,.loaded .hero-top > *{transform:none;opacity:1}
+.loaded .hero-name .ln-2 > span{transition-delay:.12s}
+.loaded .hero-top > *{transition-delay:.35s}
+.loaded .hero-bottom > *{transition-delay:.5s}
+.loaded .hero-bottom > *:nth-child(2){transition-delay:.6s}
+.loaded .hero-bottom > *:nth-child(3){transition-delay:.7s}
+.hero-bottom{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,5fr) minmax(0,3.4fr);gap:var(--gap);align-items:end;border-top:1px solid var(--line);padding-top:20px}
+.hero-role{font-size:clamp(.95rem,.9rem + .25vw,1.1rem);max-width:36ch}
+.hero-role .meta{display:block;margin-bottom:.6em}
+.hero-role a{color:var(--accent-lt)}
+.hero-lead{font-size:var(--fs-lead);line-height:1.15;font-weight:500;font-stretch:90%;max-width:26ch;letter-spacing:-.01em}
+.hero-cta{justify-self:end;display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
+
+/* Marquee */
+.marquee{background:var(--accent);color:#fff;overflow:hidden;padding:clamp(14px,2vw,26px) 0}
+.marquee-track{display:flex;width:max-content;align-items:center;will-change:transform}
+.marquee-track span{font-weight:800;font-stretch:125%;text-transform:uppercase;font-size:clamp(1.5rem,1rem + 3vw,4.2rem);letter-spacing:-.03em;line-height:1;padding:0 .35em;white-space:nowrap}
+.marquee-track i{font-style:normal;display:inline-block;width:.7em;height:.7em;border:3px solid currentColor;border-radius:50%;margin:0 .3em;font-size:clamp(1.2rem,1rem + 2vw,3rem)}
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+.statement{font-size:clamp(1.8rem,1rem + 4vw,5.4rem);font-weight:600;font-stretch:88%;line-height:1;letter-spacing:-.03em;max-width:19ch;margin-bottom:clamp(52px,8vw,130px)}
+.statement em{font-style:normal;color:var(--accent)}
+.about-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap)}
+.portrait{grid-column:1 / span 5;align-self:start;position:sticky;top:90px}
+/* EMPTY PORTRAIT FRAME — to add a photo later, place
+   <img src="portrait.jpg" alt="Sathvik Chidanand" class="pf-img">
+   inside .pf and add class "has-photo" to the .portrait figure. */
+.pf{aspect-ratio:4/5;position:relative;background:var(--ink);color:var(--on-dark);overflow:hidden}
+.pf-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+.has-photo .pf-art{display:none}
+.pf-art{position:absolute;inset:0}
+.pf-art svg{width:100%;height:100%}
+.pf-art .ring{fill:none;stroke:var(--on-dark);stroke-opacity:.18}
+.pf-art .orbit{transform-origin:200px 250px;animation:spin 60s linear infinite}
+.pf-art .orbit.r2{animation-duration:90s;animation-direction:reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.pf-corner{position:absolute;width:20px;height:20px;border:0 solid var(--accent-lt);z-index:3}
+.pf-corner.a{left:16px;top:16px;border-width:1.5px 0 0 1.5px}.pf-corner.b{right:16px;top:16px;border-width:1.5px 1.5px 0 0}
+.pf-corner.c{left:16px;bottom:16px;border-width:0 0 1.5px 1.5px}.pf-corner.d{right:16px;bottom:16px;border-width:0 1.5px 1.5px 0}
+.pf-mono{position:absolute;left:24px;bottom:28px;z-index:3;font-weight:800;font-stretch:125%;font-size:clamp(3rem,6vw,5rem);line-height:.8;letter-spacing:-.05em}
+.has-photo .pf-mono{display:none}
+.portrait figcaption{display:flex;justify-content:space-between;gap:12px;margin-top:12px}
+.about-copy{grid-column:7 / span 6}
+.about-copy .lead{font-size:var(--fs-lead);line-height:1.2;font-weight:500;font-stretch:92%;letter-spacing:-.01em;margin-bottom:1.2em}
+.about-copy p + p{margin-top:1em}
+.about-copy .body{max-width:60ch}
+.facts{display:grid;grid-template-columns:1fr 1fr;border-top:var(--border);margin-top:clamp(36px,5vw,64px)}
+.facts > div{padding:18px 16px 18px 0;border-bottom:var(--border)}
+.facts > div:nth-child(odd){border-right:var(--border)}
+.facts > div:nth-child(even){padding-left:16px}
+.facts dt{margin-bottom:6px}
+.facts dd{font-size:1rem;line-height:1.35}
+.about-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--ink);margin-top:clamp(72px,10vw,160px)}
+.stat{padding:20px 16px 0 0}
+.stat + .stat{border-left:var(--border);padding-left:16px}
+.stat-n{display:block;font-weight:800;font-stretch:125%;font-size:clamp(2.5rem,1rem + 4.6vw,6.4rem);line-height:.9;letter-spacing:-.04em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.stat-n sup,.stat-n .pre{font-size:.38em;vertical-align:top;color:var(--accent)}
+.stat-n .pre{margin-right:.06em}
+.stat .meta{display:block;margin-top:14px;max-width:24ch}
+.stats-note{margin-top:20px}
+
+/* =========================================================
+   HIGHLIGHTS — horizontal track (pinned on desktop, swipe on mobile)
+   ========================================================= */
+.hs-outer{position:relative}
+.hs-sticky{padding:var(--sec) 0;display:flex;flex-direction:column;justify-content:center}
+.hs-outer.pinned .hs-sticky{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;padding:80px 0 60px}
+.hs-head{display:flex;justify-content:space-between;align-items:end;gap:24px;padding:0 var(--gut);margin-bottom:clamp(28px,4vw,56px)}
+.hs-head .h2{font-size:clamp(2.5rem,1rem + 6vw,7.5rem)}
+.hs-meta{display:flex;flex-direction:column;align-items:flex-end;gap:12px;text-align:right}
+.hs-progress{width:clamp(80px,14vw,200px);height:1px;background:var(--line-dark);position:relative;overflow:hidden}
+.hs-progress i{position:absolute;inset:0;background:var(--accent-lt);transform-origin:0 50%;transform:scaleX(0)}
+.hs-viewport{overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.hs-viewport::-webkit-scrollbar{display:none}
+.hs-outer.pinned .hs-viewport{overflow:visible}
+.hs-track{display:flex;width:max-content;padding:0 var(--gut);will-change:transform}
+.hl{width:clamp(260px,80vw,420px);min-height:clamp(300px,50vh,460px);border-left:1px solid var(--line);padding:0 clamp(18px,2vw,32px) 8px;display:flex;flex-direction:column;gap:14px;scroll-snap-align:start}
+.hl:nth-child(even){margin-top:clamp(0px,7vh,90px)}
+.hl-n{font-weight:800;font-stretch:125%;font-size:clamp(3.2rem,2rem + 4vw,6.2rem);line-height:.82;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1px var(--on-dark);transition:color .4s,-webkit-text-stroke-color .4s;white-space:nowrap}
+.hl-n small{font-size:.4em;letter-spacing:-.02em}
+.hl-t{font-size:clamp(1.3rem,1rem + 1.1vw,2.1rem);font-weight:700;font-stretch:80%;line-height:1;text-transform:uppercase;letter-spacing:-.01em;margin-top:auto}
+.hl-v{font-size:1rem;color:var(--on-dark);max-width:30ch;opacity:.86}
+.hl:hover .hl-n{color:var(--accent-lt);-webkit-text-stroke-color:var(--accent-lt)}
+.swipe-cue{display:none;align-items:center;gap:10px;padding:18px var(--gut) 0}
+.swipe-line{width:48px;height:1px;background:var(--line-dark);position:relative;overflow:hidden}
+.swipe-line::after{content:"";position:absolute;inset:0;background:var(--accent-lt);transform:translateX(-100%);animation:scan 2.2s var(--ease-io) infinite}
+@keyframes scan{to{transform:translateX(100%)}}
+
+/* =========================================================
+   CIRCLES IN — distinct cobalt treatment
+   ========================================================= */
+.cobalt{background:var(--accent);color:#fff;--line:rgba(255,255,255,.24);--muted:rgba(255,255,255,.74);--stroke:#fff;overflow:hidden}
+.cobalt .dot{background:#fff}
+.cobalt ::selection{background:#fff;color:var(--accent)}
+.ci-head{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap);align-items:end;margin-bottom:clamp(48px,7vw,110px)}
+.ci-title{grid-column:1 / span 8}
+.ci-title .meta{margin-bottom:1em;display:flex;gap:1.2em;flex-wrap:wrap}
+.ci-word{font-weight:800;font-stretch:125%;font-size:clamp(3.6rem,1rem + 13vw,15rem);line-height:.8;letter-spacing:-.06em;text-transform:none}
+.ci-word span{display:inline-block}
+.ci-tag{grid-column:9 / span 4;font-size:var(--fs-lead);line-height:1.12;font-weight:500;font-stretch:90%;letter-spacing:-.01em}
+.ci-tag .meta{display:block;margin-top:1em}
+.ci-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap);align-items:center}
+.orbit-wrap{grid-column:1 / span 6;position:relative;aspect-ratio:1;max-width:640px;width:100%;justify-self:center}
+.orbit-svg{width:100%;height:100%;overflow:visible}
+.orbit-svg .o-ring{fill:none;stroke:rgba(255,255,255,.3);stroke-width:1}
+.orbit-svg .o-ring.dash{stroke-dasharray:3 7}
+.orbit-svg .o-core{fill:#fff}
+.orbit-svg .o-core-t{fill:var(--accent);font-family:var(--f-mono);font-size:13px;letter-spacing:2px;text-anchor:middle}
+.orbit-svg .o-node circle{fill:var(--accent);stroke:#fff;stroke-width:1.5}
+.orbit-svg .o-node text{fill:#fff;font-family:var(--f-mono);font-size:12.5px;letter-spacing:1.4px;text-anchor:middle}
+.orbit-svg .o-spoke{stroke:rgba(255,255,255,.35);stroke-width:1;stroke-dasharray:2 4}
+.orbit-svg .spin{transform-origin:300px 300px;animation:spin 80s linear infinite}
+.orbit-svg .spin-r{transform-origin:300px 300px;animation:spin 120s linear infinite reverse}
+.orbit-svg .counter{animation:spin 80s linear infinite reverse}
+.orbit-svg .counter-r{animation:spin 120s linear infinite}
+.orbit-svg .pulse{fill:none;stroke:#fff;transform-origin:300px 300px;animation:pulse 3.6s var(--ease) infinite}
+@keyframes pulse{0%{opacity:.6;transform:scale(.3)}100%{opacity:0;transform:scale(1.5)}}
+.orbit-cap{text-align:center;margin-top:10px}
+.ci-copy{grid-column:8 / span 5}
+.ci-copy h3{font-size:var(--fs-h3);font-weight:700;font-stretch:80%;line-height:.98;text-transform:uppercase;letter-spacing:-.015em;margin-bottom:.6em}
+.ci-copy p{max-width:52ch}
+.ci-copy p + p{margin-top:1em}
+.ci-feats{margin-top:clamp(28px,4vw,48px);border-top:1px solid var(--line)}
+.ci-feats li{display:grid;grid-template-columns:2.4rem 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.ci-feats li b{font-weight:600}
+.ci-phases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(64px,9vw,140px);border-top:1px solid #fff}
+.ph{padding:22px 20px 6px 0;position:relative}
+.ph + .ph{border-left:1px solid var(--line);padding-left:20px}
+.ph-t{font-weight:800;font-stretch:72%;text-transform:uppercase;font-size:clamp(2.2rem,1rem + 4vw,5.2rem);line-height:.88;letter-spacing:-.01em;margin:.25em 0 .35em}
+.ph p:not(.meta){max-width:34ch}
+.ci-role{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap);margin-top:clamp(64px,9vw,140px);padding-top:28px;border-top:1px solid var(--line);align-items:start}
+.ci-role .meta{grid-column:1 / span 3}
+.ci-role ul{grid-column:4 / span 6;display:grid;gap:10px}
+.ci-role li{padding-left:28px;position:relative}
+.ci-role li::before{content:"";position:absolute;left:0;top:.55em;width:10px;height:10px;border:1.5px solid #fff;border-radius:50%}
+.ci-cta{grid-column:10 / span 3;display:flex;flex-direction:column;gap:10px;align-items:stretch}
+.ci-cta .btn{justify-content:space-between}
+.ci-cta .btn.solid{background:#fff;color:var(--accent);border-color:#fff}
+.ci-cta .btn.solid:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ci-cta .btn:not(.solid):hover{background:#fff;color:var(--accent);border-color:#fff}
+.ci-entity{margin-top:6px}
+
+/* =========================================================
+   EXPERIENCE
+   ========================================================= */
+.exp-list{position:relative}
+.exp-list::before,.grow-line{content:"";position:absolute;top:0;bottom:0;width:1px;left:calc((100% - 40px) * 4 / 11 + 20px)}
+.exp-list::before{background:var(--line)}
+.grow-line{background:var(--accent);transform-origin:top;transform:scaleY(0)}
+.exp{display:grid;grid-template-columns:minmax(0,4fr) 40px minmax(0,7fr);grid-template-areas:"when dot body";padding:clamp(32px,4.5vw,64px) 0;border-top:var(--border)}
+.exp:first-of-type{border-top:0}
+.exp-when{grid-area:when;padding-right:var(--gap)}
+.exp-y{display:block;font-weight:800;font-stretch:125%;font-size:clamp(2.5rem,1rem + 4.6vw,6.2rem);line-height:.86;letter-spacing:-.05em}
+.exp-to{display:block;margin-top:.8em}
+.exp-dot{grid-area:dot;justify-self:center;width:13px;height:13px;border:1px solid var(--ink);border-radius:50%;background:var(--bg);margin-top:.9em;position:relative;z-index:1;transition:background .5s,border-color .5s,transform .6s var(--ease)}
+.exp.in .exp-dot{background:var(--accent);border-color:var(--accent);transform:scale(1.25)}
+.exp-body{grid-area:body;padding-left:var(--gap)}
+.exp-role{font-size:var(--fs-h3);font-weight:700;font-stretch:80%;line-height:.98;letter-spacing:-.015em;text-transform:uppercase;margin:.35em 0 .45em;max-width:20ch}
+.exp-org{font-size:1.08rem;font-weight:600;max-width:52ch}
+.exp-loc{margin-top:6px}
+.dash{margin-top:20px;display:grid;gap:10px;max-width:62ch}
+.dash li{padding-left:28px;position:relative}
+.dash li::before{content:"";position:absolute;left:0;top:.8em;width:16px;height:1px;background:var(--accent)}
+.js .exp .dash li{opacity:0;transform:translate3d(-14px,0,0);transition:opacity .7s var(--ease),transform .9s var(--ease);transition-delay:calc(.25s + var(--i,0) * 80ms)}
+.js .exp.in .dash li{opacity:1;transform:none}
+.award{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:6px 10px;border:1px solid var(--accent);color:var(--accent)}
+.award::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.also{margin-top:clamp(40px,6vw,80px);padding:20px 0;border-top:1px solid var(--ink);border-bottom:var(--border);display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:var(--gap);align-items:baseline}
+.also h3{font-size:clamp(1.15rem,1rem + .8vw,1.6rem);font-weight:700;font-stretch:85%;text-transform:uppercase;letter-spacing:-.01em}
+
+/* =========================================================
+   PROJECTS
+   ========================================================= */
+.work-intro{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap);margin-bottom:clamp(40px,6vw,96px)}
+.work-intro p{grid-column:7 / span 6;font-size:var(--fs-lead);line-height:1.2;font-weight:500;font-stretch:92%}
+.project{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap);padding:clamp(40px,6vw,96px) 0;border-top:1px solid var(--ink)}
+.p-info{grid-column:1 / span 5;grid-row:1;display:flex;flex-direction:column;gap:18px}
+.p-media{grid-column:6 / span 7;grid-row:1;aspect-ratio:16/11;background:var(--ink);cursor:pointer}
+.project:nth-child(even) .p-info{grid-column:8 / span 5}
+.project:nth-child(even) .p-media{grid-column:1 / span 7}
+.p-media img{width:100%;height:100%;object-fit:cover}
+.p-media:hover img{--s:1.14}
+.p-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.p-num{font-weight:800;font-stretch:125%;font-size:clamp(2.4rem,1rem + 3vw,4.6rem);line-height:.85;letter-spacing:-.05em}
+.p-title{font-size:clamp(1.7rem,1rem + 2.4vw,3.4rem);font-weight:800;font-stretch:76%;line-height:.95;letter-spacing:-.01em;text-transform:uppercase}
+.p-sub{font-size:1.1rem;font-weight:500;max-width:40ch}
+.p-meta{display:grid;grid-template-columns:1fr 1fr;border-top:var(--border)}
+.p-meta > div{padding:12px 12px 12px 0;border-bottom:var(--border)}
+.p-meta dd{font-size:.98rem;line-height:1.3;margin-top:4px}
+.p-meta .big{font-weight:800;font-stretch:115%;font-size:1.25rem;letter-spacing:-.02em}
+.p-toggle{align-self:flex-start}
+.p-toggle[aria-expanded="true"] .arr{transform:rotate(90deg)}
+.p-more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .8s var(--ease)}
+.p-more > div{overflow:hidden}
+.project.open .p-more{grid-template-rows:1fr}
+.no-js .p-more{grid-template-rows:1fr}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.tags li{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--line);padding:6px 10px}
+
+/* =========================================================
+   EDUCATION
+   ========================================================= */
+.edu{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap);padding:clamp(28px,4vw,56px) 0;border-top:1px solid var(--on-dark);align-items:start}
+.edu:last-of-type{border-bottom:1px solid var(--line)}
+.edu-y{grid-column:1 / span 3}
+.edu-y b{display:block;font-weight:800;font-stretch:125%;font-size:clamp(2.2rem,1rem + 3.4vw,4.8rem);line-height:.86;letter-spacing:-.05em}
+.edu-main{grid-column:4 / span 6}
+.edu-main h3{font-size:clamp(2rem,1rem + 4vw,5.4rem);font-weight:800;font-stretch:72%;text-transform:uppercase;line-height:.88;letter-spacing:-.01em;margin:.2em 0 .3em}
+.edu-main p:not(.meta){font-size:1.08rem;max-width:44ch}
+.edu-side{grid-column:10 / span 3;border-left:1px solid var(--line);padding-left:20px}
+.edu-side .num{display:block;font-weight:800;font-stretch:125%;font-size:clamp(2.4rem,1rem + 3vw,4.4rem);line-height:.9;letter-spacing:-.04em;color:var(--accent-lt);font-variant-numeric:tabular-nums}
+.edu-side p{margin-top:10px}
+.fellow{margin-top:clamp(40px,6vw,80px);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap);align-items:center}
+.fellow-ring{grid-column:1 / span 4;aspect-ratio:1;max-width:340px;width:100%;position:relative}
+.fellow-ring svg{width:100%;height:100%;overflow:visible}
+.fellow-ring .bg{fill:none;stroke:var(--line-dark);stroke-width:1}
+.fellow-ring .fg{fill:none;stroke:var(--accent-lt);stroke-width:2;stroke-dasharray:1131;stroke-dashoffset:1131;transform:rotate(-90deg);transform-origin:center;transition:stroke-dashoffset 2.4s var(--ease-io)}
+.fellow.in .fellow-ring .fg{stroke-dashoffset:0}
+.no-js .fellow-ring .fg{stroke-dashoffset:0}
+.fellow-ring .val{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
+.fellow-ring .val b{font-weight:800;font-stretch:125%;font-size:clamp(2.2rem,1rem + 3vw,3.6rem);letter-spacing:-.04em;line-height:1}
+.fellow-copy{grid-column:6 / span 7}
+.fellow-copy h3{font-size:var(--fs-h3);font-weight:700;font-stretch:80%;text-transform:uppercase;line-height:.98;margin:.4em 0 .5em}
+.vol{margin-top:clamp(64px,9vw,140px);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap);padding-top:24px;border-top:1px solid var(--line)}
+.vol .meta{grid-column:1 / span 3}
+.vol h3{grid-column:4 / span 5;font-size:clamp(1.6rem,1rem + 2.4vw,3.2rem);font-weight:800;font-stretch:76%;text-transform:uppercase;line-height:.95}
+.vol p{grid-column:9 / span 4}
+
+/* =========================================================
+   SKILLS — typographic index
+   ========================================================= */
+.sk-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 var(--gap)}
+.sk-col h3{padding-bottom:14px;border-bottom:1px solid var(--ink);display:flex;justify-content:space-between}
+.sk-col li{display:flex;align-items:baseline;gap:14px;padding:clamp(14px,1.6vw,22px) 0;border-bottom:var(--border);position:relative;isolation:isolate;overflow:hidden}
+.sk-col li::before{content:"";position:absolute;inset:0;background:var(--ink);transform:translateY(101%);transition:transform .5s var(--ease);z-index:-1}
+.sk-col li .meta{color:var(--accent);min-width:2em}
+.sk-col li span:last-child{font-size:clamp(1.25rem,1rem + 1vw,2rem);font-weight:600;font-stretch:85%;line-height:1.05;letter-spacing:-.01em;transition:transform .5s var(--ease),color .3s}
+@media (hover:hover){
+  .sk-col li:hover::before{transform:none}
+  .sk-col li:hover span:last-child{color:var(--on-dark);transform:translateX(10px)}
+  .sk-col li:hover .meta{color:var(--accent-lt)}
+}
+.sk-note{margin-top:24px;max-width:60ch}
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+.contact-title{font-weight:800;font-stretch:72%;text-transform:uppercase;font-size:clamp(3rem,.8rem + 11vw,14.5rem);line-height:.84;letter-spacing:-.015em;margin-bottom:clamp(52px,8vw,120px)}
+.contact-title .w{display:block}
+.contact-title .w:nth-child(2){margin-left:clamp(0px,14vw,280px)}
+.contact-title .w:nth-child(3){margin-left:clamp(0px,6vw,120px)}
+.contact-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap);align-items:start}
+.contact-lead{grid-column:1 / span 6;font-size:var(--fs-lead);line-height:1.2;font-weight:500;font-stretch:92%;max-width:30ch}
+.contact-lead + .meta{margin-top:20px}
+.links{grid-column:8 / span 5;border-top:1px solid var(--line-dark)}
+.lk{display:grid;grid-template-columns:1fr auto;gap:6px 16px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line-dark);position:relative}
+.lk .meta{grid-column:1 / -1}
+.lk b{font-weight:700;font-stretch:90%;font-size:clamp(1.3rem,1rem + 1.2vw,2.1rem);letter-spacing:-.01em;line-height:1.05;word-break:break-word}
+.lk .go{width:48px;height:48px;border-radius:50%;border:1px solid var(--line-dark);display:grid;place-items:center;transition:background .3s,color .3s,border-color .3s,transform .5s var(--ease)}
+.lk:hover .go{background:var(--accent-lt);border-color:var(--accent-lt);color:var(--ink);transform:rotate(-45deg)}
+.lk:hover b{color:var(--accent-lt)}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer{background:var(--bg);color:var(--ink);padding:clamp(56px,8vw,120px) var(--gut) calc(24px + env(safe-area-inset-bottom));overflow:hidden}
+.f-cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gap);padding-bottom:clamp(40px,6vw,80px)}
+.f-cols h3{margin-bottom:16px}
+.f-cols li{margin-bottom:8px}
+.f-cols a{font-size:1.05rem}
+.f-top{display:flex;align-items:flex-start;justify-content:flex-end}
+.to-top{display:grid;place-items:center;width:clamp(96px,10vw,140px);aspect-ratio:1;border-radius:50%;background:var(--ink);color:var(--on-dark);font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;transition:background .3s,color .3s,translate .6s var(--ease)}
+.to-top:hover{background:var(--accent);color:#fff}
+.f-mega{display:block;font-weight:900;font-stretch:72%;text-transform:uppercase;line-height:.78;letter-spacing:-.01em;white-space:nowrap;margin:0 0 .04em}
+.f-mega-wrap{border-top:1px solid var(--ink);padding-top:14px;overflow:hidden}
+.js .f-mega .ch{display:inline-block;transform:translate3d(0,100%,0);transition:transform 1.1s var(--ease);transition-delay:calc(var(--i) * 35ms)}
+.js .f-mega-wrap.in .f-mega .ch{transform:none}
+.f-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:var(--border);padding-top:16px;margin-top:10px}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width:1180px){
+  .nav{display:none}
+  .menu-btn{display:inline-flex}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat:nth-child(3){border-left:0;padding-left:0}
+  .stat:nth-child(n+3){margin-top:32px;border-top:var(--border)}
+  .ci-role ul{grid-column:4 / span 9}
+  .ci-cta{grid-column:4 / span 9;flex-direction:row;flex-wrap:wrap;margin-top:16px}
+}
+@media (max-width:899px){
+  .sidecount{display:none}
+  .hero{padding-top:88px}
+  .hero-top{grid-template-columns:1fr 1fr}
+  .hero-top .hide-sm{display:none}
+  .hero-bottom{grid-template-columns:1fr;gap:18px}
+  .hero-cta{justify-self:start;justify-content:flex-start}
+  .sec-head{grid-template-columns:1fr;gap:10px}
+  .sec-num{font-size:clamp(3.4rem,20vw,6rem)}
+  .about-grid,.work-intro,.contact-grid,.ci-head,.ci-grid,.ci-role,.edu,.fellow,.vol{grid-template-columns:1fr}
+  .portrait,.about-copy,.work-intro p,.contact-lead,.links,.ci-title,.ci-tag,.orbit-wrap,.ci-copy,.ci-role .meta,.ci-role ul,.ci-cta,.edu-y,.edu-main,.edu-side,.fellow-ring,.fellow-copy,.vol .meta,.vol h3,.vol p{grid-column:1 / -1}
+  .portrait{position:relative;top:auto;max-width:440px}
+  .about-copy{margin-top:40px}
+  .facts{grid-template-columns:1fr}
+  .facts > div:nth-child(odd){border-right:0}
+  .facts > div:nth-child(even){padding-left:0}
+  .hl:nth-child(even){margin-top:0}
+  .hl{min-height:0;gap:12px;padding-bottom:4px}
+  .hl-t{margin-top:18px}
+  .orbit-svg .o-node text{font-size:19px}
+  .orbit-svg .o-core-t{font-size:17px}
+  .swipe-cue{display:flex}
+  .hs-meta{display:none}
+  .ci-tag{margin-top:8px}
+  .orbit-wrap{max-width:460px}
+  .ci-copy{margin-top:24px}
+  .ci-phases{grid-template-columns:1fr}
+  .ph + .ph{border-left:0;padding-left:0;border-top:1px solid var(--line)}
+  .ci-cta{flex-direction:column}
+  .exp-list::before,.exp-list .grow-line{left:13.5px}
+  .exp{grid-template-columns:28px minmax(0,1fr);grid-template-areas:"dot when" "dot body";row-gap:12px}
+  .exp-when,.exp-body{padding:0 0 0 14px}
+  .exp-dot{align-self:start;margin-top:.7em}
+  .exp-y{display:inline}
+  .exp-to{display:inline;margin:0 0 0 .6em}
+  .also{grid-template-columns:1fr;gap:8px}
+  .project{grid-template-columns:1fr;row-gap:24px}
+  .p-info,.p-media,.project:nth-child(even) .p-info,.project:nth-child(even) .p-media{grid-column:1 / -1}
+  .p-media{grid-row:1}
+  .p-info{grid-row:2}
+  .edu{row-gap:12px}
+  .edu-side{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:14px}
+  .fellow-ring{max-width:240px}
+  .vol{row-gap:10px}
+  .sk-grid{grid-template-columns:1fr;row-gap:40px}
+  .contact-title .w:nth-child(2),.contact-title .w:nth-child(3){margin-left:0}
+  .contact-title .w:nth-child(2){padding-left:12vw}
+  .links{margin-top:40px}
+  .f-cols{grid-template-columns:1fr 1fr;row-gap:36px}
+  .f-top{grid-column:1 / -1;justify-content:flex-start}
+}
+@media (max-width:420px){
+  .p-meta{grid-template-columns:1fr}
+  .hero-top .hero-read{display:none}
+  .hero-top{grid-template-columns:1fr}
+  .btn{padding:1em 1.2em}
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;transition-delay:0s!important}
+  .js .rv,.js .rv-x,.js .rv-s,.js .split .wi,.js .hero-name .ln > span,.js .hero-pre > span,.js .hero-bottom > *,.js .hero-top > *,.js .f-mega .ch,.js .exp .dash li{opacity:1!important;transform:none!important}
+  .js .mask{clip-path:none!important}
+  .mask img{--s:1!important;translate:none!important}
+  .loader{display:none!important}
+  .grow-line{transform:scaleY(1)!important}
+  .fellow-ring .fg{stroke-dashoffset:0!important}
+}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="loader" aria-hidden="true">
+  <svg class="loader-ring" viewBox="0 0 64 64"><circle class="bg" cx="32" cy="32" r="30"/><circle class="fg" cx="32" cy="32" r="30"/></svg>
+  <span class="loader-count">000</span>
+  <span class="meta">Sathvik Chidanand<br><span style="opacity:.6">Founder — Circles IN</span></span>
+</div>
+
+<div class="cursor" aria-hidden="true"><div class="c-ring"><span class="c-label"></span></div><div class="c-dot"></div></div>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="site-head">
+  <a href="#top" class="brand magnetic" aria-label="Sathvik Chidanand — back to top">
+    <b>Sathvik Chidanand</b>
+    <span class="meta">Founder · Circles IN</span>
+  </a>
+  <nav class="nav" aria-label="Primary">
+    <ol>
+      <li><a href="#about" data-nav="about"><span class="n">01</span><span>About</span></a></li>
+      <li><a href="#circles" data-nav="circles"><span class="n">02</span><span>Circles IN</span></a></li>
+      <li><a href="#experience" data-nav="experience"><span class="n">03</span><span>Experience</span></a></li>
+      <li><a href="#work" data-nav="work"><span class="n">04</span><span>Projects</span></a></li>
+      <li><a href="#education" data-nav="education"><span class="n">05</span><span>Education</span></a></li>
+      <li><a href="#contact" data-nav="contact"><span class="n">06</span><span>Contact</span></a></li>
+    </ol>
+    <a class="nav-ext" href="https://www.circlesinapp.com" target="_blank" rel="noopener" aria-label="Visit Circles IN website (opens in a new tab)">circlesinapp.com ↗</a>
+  </nav>
+  <button class="menu-btn" aria-expanded="false" aria-controls="menu"><span class="mb-t">Menu</span><span class="bars" aria-hidden="true"><i></i><i></i></span></button>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Site menu">
+  <ol>
+    <li><a href="#about" style="--i:0"><span class="n">01</span>About</a></li>
+    <li><a href="#circles" style="--i:1"><span class="n">02</span>Circles IN</a></li>
+    <li><a href="#experience" style="--i:2"><span class="n">03</span>Experience</a></li>
+    <li><a href="#work" style="--i:3"><span class="n">04</span>Projects</a></li>
+    <li><a href="#education" style="--i:4"><span class="n">05</span>Education</a></li>
+    <li><a href="#contact" style="--i:5"><span class="n">06</span>Contact</a></li>
+  </ol>
+  <div class="menu-foot">
+    <a class="btn" href="https://www.circlesinapp.com" target="_blank" rel="noopener">Visit Circles IN <span class="arr">↗</span></a>
+    <p class="meta" style="opacity:.6">Bengaluru, India</p>
+  </div>
+</div>
+
+<div class="sidecount" aria-hidden="true"><span class="sc-num">00</span><span class="sc-bar"><i></i></span><span class="sc-name">Intro</span></div>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top" aria-label="Introduction">
+  <canvas class="hero-canvas" aria-hidden="true"></canvas>
+  <div class="hero-top">
+    <p class="meta">[00 / Intro]<br><span class="dim">He / Him</span></p>
+    <p class="meta hide-sm">Bengaluru, India<br><span class="dim">12.972° N — 77.594° E</span></p>
+    <p class="meta hide-sm">Founder · Engineer · Builder<br><span class="dim">Product · Community · Technology</span></p>
+    <p class="meta hero-read" aria-hidden="true">Circle radius<br><span class="dim">r = <span data-r>0.000</span> · n = <span data-n>00</span></span></p>
+  </div>
+
+  <h1 class="hero-name">
+    <span class="hero-pre meta"><span>Founder &amp; CEO, Circles IN —</span></span>
+    <span class="ln"><span class="fit" data-fit="hero">Sathvik</span></span>
+    <span class="ln ln-2"><span class="fit" data-fit="hero">Chidanand<i class="dot"></i></span></span>
+  </h1>
+
+  <div class="hero-bottom">
+    <p class="hero-role"><span class="meta dim">Currently</span>Founder &amp; CEO of <a class="ul" href="https://www.circlesinapp.com" target="_blank" rel="noopener">Circles IN</a> — a social events platform for discovering local events and meeting like-minded people.</p>
+    <p class="hero-lead">Computer Science engineer and Cornell Engineering Management graduate, building technology that brings people together.</p>
+    <div class="hero-cta">
+      <a href="#about" class="btn magnetic" data-cursor="Explore">Explore work <span class="arr">↓</span></a>
+      <a href="https://www.circlesinapp.com" target="_blank" rel="noopener" class="btn solid magnetic" data-cursor="Visit">Circles IN <span class="arr">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Find your circle</span><i></i><span>Live your moment</span><i></i><span>Software</span><i></i><span>Product</span><i></i><span>Community</span><i></i>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="chapter" id="about" data-num="01" data-name="About">
+<section class="sec" aria-labelledby="about-h">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="sec-num rv" aria-hidden="true">01</span>
+      <div>
+        <p class="sec-kicker meta rv"><span class="ac">[01 / About]</span><span class="dim">Entrepreneur · Engineer · Community builder</span></p>
+        <h2 class="h2 split" id="about-h">Code, people<br>&amp; the room<i class="dot"></i></h2>
+      </div>
+    </header>
+
+    <p class="statement split">Engineering products. Leading teams. <em>Getting</em> the community back together.</p>
+
+    <div class="about-grid">
+      <figure class="portrait rv-s">
+        <div class="pf" data-cursor="Hello">
+          <!-- Portrait slot: add <img class="pf-img" src="portrait.jpg" alt="Sathvik Chidanand"> here and add class "has-photo" to the figure. -->
+          <div class="pf-art" aria-hidden="true">
+            <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+              <g class="orbit">
+                <circle class="ring" cx="200" cy="250" r="70"/>
+                <circle class="ring" cx="200" cy="250" r="150" stroke-dasharray="2 6"/>
+                <circle cx="350" cy="250" r="5" fill="#8E8DFF"/>
+              </g>
+              <g class="orbit r2">
+                <circle class="ring" cx="200" cy="250" r="110"/>
+                <circle class="ring" cx="200" cy="250" r="200"/>
+                <circle cx="200" cy="140" r="4" fill="#EDEBE5"/>
+                <circle cx="200" cy="450" r="3" fill="#EDEBE5" fill-opacity=".6"/>
+              </g>
+              <circle cx="200" cy="250" r="22" fill="none" stroke="#8E8DFF" stroke-width="1.5"/>
+              <circle cx="200" cy="250" r="3" fill="#8E8DFF"/>
+            </svg>
+          </div>
+          <span class="pf-corner a"></span><span class="pf-corner b"></span><span class="pf-corner c"></span><span class="pf-corner d"></span>
+          <span class="pf-mono" aria-hidden="true">SC</span>
+        </div>
+        <figcaption class="meta"><span>Fig. A — Sathvik Chidanand</span><span class="dim">Bengaluru, IN</span></figcaption>
+      </figure>
+
+      <div class="about-copy">
+        <p class="lead rv">Sathvik Chidanand is the founder of Circles IN — a social events platform that helps people discover local events, meet like-minded individuals and build stronger communities through shared experiences.</p>
+        <p class="body rv">His journey runs from software engineering at Zebra Technologies and a healthcare-imaging internship at BD to product development, engineering management and entrepreneurship.</p>
+        <p class="body rv">He holds a Bachelor of Engineering in Computer Science from RV College of Engineering, Bengaluru, and a Master of Engineering in Engineering/Industrial Management from Cornell University. His work combines technology, business execution and real-world community building.</p>
+
+        <dl class="facts rv">
+          <div><dt class="meta dim">Venture</dt><dd>Founder &amp; CEO, Circles IN — since July 2024</dd></div>
+          <div><dt class="meta dim">Also listed</dt><dd>COO, The Presidency Public School, Sira <span class="dim">(per his LinkedIn profile)</span></dd></div>
+          <div><dt class="meta dim">Graduate</dt><dd>MEng, Engineering Management — Cornell University</dd></div>
+          <div><dt class="meta dim">Undergraduate</dt><dd>BE, Computer Science — RV College of Engineering</dd></div>
+          <div><dt class="meta dim">Location</dt><dd>Bengaluru, Karnataka, India</dd></div>
+          <div><dt class="meta dim">Focus</dt><dd>Product, software, community &amp; events</dd></div>
+        </dl>
+
+        <div class="about-links rv">
+          <a class="btn magnetic" href="#circles">About Circles IN <span class="arr">→</span></a>
+          <a class="btn magnetic" href="#experience">Experience <span class="arr">→</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat rv" style="--d:0"><span class="stat-n"><span data-count="9.63" data-dec="2">9.63</span></span><span class="meta dim">CGPA, BE Computer Science — RVCE (reported)</span></div>
+      <div class="stat rv" style="--d:1"><span class="stat-n"><span class="pre">$</span><span data-count="37.5" data-dec="1">37.5</span><sup>K</sup></span><span class="meta dim">Cornell Engineering Management Fellowship</span></div>
+      <div class="stat rv" style="--d:2"><span class="stat-n"><span data-count="30">30</span></span><span class="meta dim">Cross-functional team led at Zebra Technologies</span></div>
+      <div class="stat rv" style="--d:3"><span class="stat-n"><span data-count="150">150</span></span><span class="meta dim">Establishments using SmartZ, per his profile</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS (horizontal) -->
+<section class="dark hs-outer" aria-labelledby="hl-h">
+  <div class="hs-sticky">
+    <div class="hs-head">
+      <div>
+        <p class="sec-kicker meta"><span class="ac">[01.B / Highlights]</span><span class="dim">Results as reported on his profile</span></p>
+        <h2 class="h2" id="hl-h">Selected<br>highlights<i class="dot"></i></h2>
+      </div>
+      <div class="hs-meta meta dim"><span>Keep scrolling →</span><span class="hs-progress"><i></i></span></div>
+    </div>
+    <div class="hs-viewport" data-cursor="Drag" tabindex="0" aria-label="Career highlights, scroll horizontally">
+      <ol class="hs-track">
+        <li class="hl"><span class="hl-n">~2<small>MO</small></span><span class="meta ac">Circles IN · 2024</span><h3 class="hl-t">MVP built &amp; launched</h3><p class="hl-v">Led development and launch of the Circles IN MVP in approximately two months.</p></li>
+        <li class="hl"><span class="hl-n">100<small>%</small></span><span class="meta ac">Circles Skatefest · Cornell</span><h3 class="hl-t">Event turnout</h3><p class="hl-v">Organised Circles Skatefest at Cornell University, reported as achieving full turnout.</p></li>
+        <li class="hl"><span class="hl-n">91<small>%</small></span><span class="meta ac">Zebra Technologies</span><h3 class="hl-t">Wi-Fi analysis &amp; debugging tool</h3><p class="hl-v">Built with libtins; reported on his profile to enhance wireless network security by 91%.</p></li>
+        <li class="hl"><span class="hl-n">48<small>%</small></span><span class="meta ac">Zebra Technologies · Intern</span><h3 class="hl-t">Build automation</h3><p class="hl-v">Optimised a proprietary build process with automation frameworks — a reported 48% productivity improvement.</p></li>
+        <li class="hl"><span class="hl-n">79<small>%</small></span><span class="meta ac">BD · Summer intern</span><h3 class="hl-t">IV workflow automation</h3><p class="hl-v">Automated an intravenous medication administration workflow with fiducial markers — reportedly 79% fewer person-hours.</p></li>
+        <li class="hl"><span class="hl-n">93<small>%</small></span><span class="meta ac">BD · Summer intern</span><h3 class="hl-t">Clinical-image correction</h3><p class="hl-v">A hybrid clinical-image correction algorithm with a reported accuracy of 93%.</p></li>
+        <li class="hl"><span class="hl-n">IEEE</span><span class="meta ac">CSITSS 2021</span><h3 class="hl-t">SmartZ presented</h3><p class="hl-v">“SmartZ COVID-19 Smart Door” presented at the 2021 IEEE CSITSS conference.</p></li>
+        <li class="hl"><span class="hl-n">★</span><span class="meta ac">BD · 2021</span><h3 class="hl-t">Stand Out Performer</h3><p class="hl-v">Award received from the company’s vice president during his BD internship.</p></li>
+      </ol>
+    </div>
+    <p class="swipe-cue meta dim" aria-hidden="true"><span>Swipe</span><span class="swipe-line"></span><span>→</span></p>
+  </div>
+</section>
+</div>
+
+<!-- CIRCLES IN -->
+<div class="chapter" id="circles" data-num="02" data-name="Circles IN">
+<section class="sec cobalt" aria-labelledby="ci-h">
+  <div class="wrap">
+    <div class="ci-head">
+      <div class="ci-title">
+        <p class="meta rv"><span>[02 / The venture]</span><span style="opacity:.74">Founder &amp; CEO · July 2024 — Present</span></p>
+        <h2 class="ci-word split" id="ci-h">Circles IN<i class="dot"></i></h2>
+      </div>
+      <p class="ci-tag rv" style="--d:2">“Find your circle. Live your moment.”<span class="meta" style="opacity:.74">Getting the community back together!</span></p>
+    </div>
+
+    <div class="ci-grid">
+      <figure class="orbit-wrap rv-s">
+        <svg class="orbit-svg" viewBox="0 0 600 600" role="img" aria-label="Diagram: a person at the centre, surrounded by Circles IN features — discover, join, chat, attendees, photos, live updates and host">
+          <circle class="pulse" cx="300" cy="300" r="120" stroke-width="1"/>
+          <circle class="o-ring" cx="300" cy="300" r="70"/>
+          <circle class="o-ring dash" cx="300" cy="300" r="160"/>
+          <circle class="o-ring" cx="300" cy="300" r="250"/>
+          <g class="spin">
+            <line class="o-spoke" x1="300" y1="300" x2="300" y2="140"/>
+            <line class="o-spoke" x1="300" y1="300" x2="438.6" y2="380"/>
+            <line class="o-spoke" x1="300" y1="300" x2="161.4" y2="380"/>
+            <g class="o-node" transform="translate(300 140)"><g class="counter"><circle r="9"/><text y="-20">DISCOVER</text></g></g>
+            <g class="o-node" transform="translate(438.6 380)"><g class="counter"><circle r="9"/><text y="28">JOIN</text></g></g>
+            <g class="o-node" transform="translate(161.4 380)"><g class="counter"><circle r="9"/><text y="28">HOST</text></g></g>
+          </g>
+          <g class="spin-r">
+            <g class="o-node" transform="translate(550 300)"><g class="counter-r"><circle r="7"/><text y="-18">CHAT</text></g></g>
+            <g class="o-node" transform="translate(300 550)"><g class="counter-r"><circle r="7"/><text y="26">PHOTOS</text></g></g>
+            <g class="o-node" transform="translate(50 300)"><g class="counter-r"><circle r="7"/><text y="-18">ATTENDEES</text></g></g>
+            <g class="o-node" transform="translate(300 50)"><g class="counter-r"><circle r="7"/><text y="-18">LIVE</text></g></g>
+          </g>
+          <circle class="o-core" cx="300" cy="300" r="46"/>
+          <text class="o-core-t" x="300" y="305">YOU</text>
+        </svg>
+        <figcaption class="orbit-cap meta" style="opacity:.74">Concept diagram — not a product screenshot</figcaption>
+      </figure>
+
+      <div class="ci-copy">
+        <h3 class="rv">Meeting people shouldn’t depend on luck<i class="dot"></i></h3>
+        <p class="rv">Finding things to do nearby — and people who enjoy the same things — is harder than it should be. Circles IN is a social events platform built to change that: discover and join local events that match your interests, connect with like-minded people, or host your own gatherings.</p>
+        <p class="rv">The mission is simple: genuine connections, built through shared experiences.</p>
+        <ul class="ci-feats">
+          <li class="rv-x" style="--d:0"><span class="meta">01</span><span><b>Discover &amp; join</b> local social events</span></li>
+          <li class="rv-x" style="--d:1"><span class="meta">02</span><span><b>Interest matching</b> — activities that fit you</span></li>
+          <li class="rv-x" style="--d:2"><span class="meta">03</span><span><b>Host &amp; manage</b> your own events</span></li>
+          <li class="rv-x" style="--d:3"><span class="meta">04</span><span><b>Event chats</b> and communities</span></li>
+          <li class="rv-x" style="--d:4"><span class="meta">05</span><span><b>Attendee lists</b>, instant photo sharing &amp; live updates</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <ol class="ci-phases">
+      <li class="ph rv" style="--d:0"><p class="meta" style="opacity:.74">Phase 01</p><h3 class="ph-t">Before</h3><p>Discover events, see who’s going, and join the conversation in the event chat.</p></li>
+      <li class="ph rv" style="--d:1"><p class="meta" style="opacity:.74">Phase 02</p><h3 class="ph-t">During</h3><p>Live updates and instant photo sharing keep everyone in the same moment.</p></li>
+      <li class="ph rv" style="--d:2"><p class="meta" style="opacity:.74">Phase 03</p><h3 class="ph-t">After</h3><p>The circle stays together — communities that outlast a single event.</p></li>
+    </ol>
+
+    <div class="ci-role">
+      <p class="meta rv">The founder’s role</p>
+      <ul>
+        <li class="rv-x" style="--d:0">Building the social networking and event-discovery platform end to end.</li>
+        <li class="rv-x" style="--d:1">Led development and launch of the MVP in approximately two months.</li>
+        <li class="rv-x" style="--d:2">Shaping event discovery, chats, attendee lists, photo sharing and live updates.</li>
+        <li class="rv-x" style="--d:3">Supporting community growth across university and city communities.</li>
+        <li class="rv-x" style="--d:4">Organised Circles Skatefest at Cornell University <span class="rep">Reported 100% turnout</span></li>
+      </ul>
+      <div class="ci-cta rv">
+        <a class="btn solid magnetic" href="https://www.circlesinapp.com" target="_blank" rel="noopener" data-cursor="Visit">circlesinapp.com <span class="arr">↗</span></a>
+        <a class="btn magnetic" href="https://www.instagram.com/circlesin_app/" target="_blank" rel="noopener" data-cursor="Follow">@circlesin_app <span class="arr">↗</span></a>
+        <p class="ci-entity meta" style="opacity:.74">Developed by Cheevo Technologies Pvt. Ltd.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="chapter" id="experience" data-num="03" data-name="Experience">
+<section class="sec" aria-labelledby="exp-h">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="sec-num rv" aria-hidden="true">03</span>
+      <div>
+        <p class="sec-kicker meta rv"><span class="ac">[03 / Professional experience]</span><span class="dim">2021 — Present</span></p>
+        <h2 class="h2 split" id="exp-h">From code<br>to company<i class="dot"></i></h2>
+      </div>
+    </header>
+
+    <div class="exp-list">
+      <span class="grow-line" data-grow aria-hidden="true"></span>
+
+      <article class="exp">
+        <div class="exp-when"><span class="exp-y">2024</span><span class="exp-to meta dim">Jul 2024 — Present</span></div>
+        <span class="exp-dot" aria-hidden="true"></span>
+        <div class="exp-body">
+          <p class="meta dim">E/01 · Founder</p>
+          <h3 class="exp-role">CEO &amp; Founder</h3>
+          <p class="exp-org">Circles IN</p>
+          <p class="exp-loc meta dim">Bengaluru, Karnataka, India</p>
+          <ul class="dash">
+            <li style="--i:0">Building a social networking and event-discovery platform.</li>
+            <li style="--i:1">Led development and launch of the MVP in approximately two months.</li>
+            <li style="--i:2">Designing experiences that connect people before, during and after events.</li>
+            <li style="--i:3">Organised Circles Skatefest at Cornell University — reported as achieving 100% turnout.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="exp">
+        <div class="exp-when"><span class="exp-y">2022</span><span class="exp-to meta dim">Jun 2022 — Feb 2023</span></div>
+        <span class="exp-dot" aria-hidden="true"></span>
+        <div class="exp-body">
+          <p class="meta dim">E/02 · Engineering</p>
+          <h3 class="exp-role">Software Engineer I</h3>
+          <p class="exp-org">Zebra Technologies</p>
+          <p class="exp-loc meta dim">Bengaluru, Karnataka, India</p>
+          <ul class="dash">
+            <li style="--i:0">Implemented a Wi-Fi analysis and debugging tool using libtins — reported on his profile to enhance wireless network security by 91%.</li>
+            <li style="--i:1">Collaborated with internal stakeholders on requirements and technical solutions.</li>
+            <li style="--i:2">Led a cross-functional team of 30 in planning a nationwide corporate wellness and mental-health gathering (October 2022).</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="exp">
+        <div class="exp-when"><span class="exp-y">2022</span><span class="exp-to meta dim">Jan 2022 — Jun 2022</span></div>
+        <span class="exp-dot" aria-hidden="true"></span>
+        <div class="exp-body">
+          <p class="meta dim">E/03 · Internship</p>
+          <h3 class="exp-role">Software Engineer Intern</h3>
+          <p class="exp-org">Zebra Technologies</p>
+          <ul class="dash">
+            <li style="--i:0">Optimised the company’s proprietary build process with automation frameworks — a reported 48% productivity improvement.</li>
+            <li style="--i:1">Introduced a Jira workflow for capturing, assigning and prioritising development tasks.</li>
+            <li style="--i:2">Coordinated logistics and inventory as the elected interns’ representative.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="exp">
+        <div class="exp-when"><span class="exp-y">2021</span><span class="exp-to meta dim">May 2021 — Jul 2021</span></div>
+        <span class="exp-dot" aria-hidden="true"></span>
+        <div class="exp-body">
+          <p class="meta dim">E/04 · Internship</p>
+          <h3 class="exp-role">Summer Intern</h3>
+          <p class="exp-org">BD (Becton Dickinson)</p>
+          <p class="exp-loc meta dim">Bengaluru, Karnataka, India</p>
+          <ul class="dash">
+            <li style="--i:0">Automated an intravenous medication administration workflow using fiducial markers — reportedly reducing person-hours by 79%.</li>
+            <li style="--i:1">Developed a hybrid clinical-image correction algorithm with a reported accuracy of 93%.</li>
+          </ul>
+          <p class="award meta">Stand Out Performer award — from the company’s VP</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="also rv">
+      <p class="meta dim">Also listed on his profile</p>
+      <div><h3>COO — The Presidency Public School, Sira</h3><p class="meta dim" style="margin-top:6px">As stated on his LinkedIn profile</p></div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- PROJECTS -->
+<div class="chapter" id="work" data-num="04" data-name="Projects">
+<section class="sec paper-2" aria-labelledby="work-h">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="sec-num rv" aria-hidden="true">04</span>
+      <div>
+        <p class="sec-kicker meta rv"><span class="ac">[04 / Selected projects]</span><span class="dim">Engineering work, 2021 — 2022</span></p>
+        <h2 class="h2 split" id="work-h">Built for<br>the real world<i class="dot"></i></h2>
+      </div>
+    </header>
+    <div class="work-intro"><p class="rv">Two engineering projects from the pandemic years — one for patient monitoring in a lab setting, one for safer public entrances.</p></div>
+
+    <div class="projects">
+      <article class="project" id="p1">
+        <div class="p-media mask" data-cursor="Open" data-toggle="p1"><img data-art="vitals" alt="Abstract plate: monitoring waveforms and a risk dashboard grid" data-speed=".05"></div>
+        <div class="p-info">
+          <div class="p-top"><span class="p-num">P/01</span><span class="meta dim">Healthcare · Monitoring · Analytics</span></div>
+          <h3 class="p-title">EasyVit-P</h3>
+          <p class="p-sub">Continuous monitoring and control for patient vitals and analytical results.</p>
+          <dl class="p-meta">
+            <div><dt class="meta dim">Engagement</dt><dd>Consultancy project — Micro Lab Instruments Ltd.</dd></div>
+            <div><dt class="meta dim">Timeline</dt><dd>Oct 2021 — Jan 2022</dd></div>
+          </dl>
+          <button class="btn p-toggle magnetic" aria-expanded="false" aria-controls="p1-more"><span class="lbl">Project details</span><span class="arr">→</span></button>
+          <div class="p-more" id="p1-more"><div>
+            <ul class="dash" style="margin-top:6px">
+              <li>Developed a continuous monitoring and control system for patient vitals and analytical results.</li>
+              <li>Implemented a risk assessment and mitigation module using Power BI dashboards.</li>
+            </ul>
+            <ul class="tags"><li>Monitoring</li><li>Control systems</li><li>Power BI</li><li>Risk assessment</li></ul>
+          </div></div>
+        </div>
+      </article>
+
+      <article class="project" id="p2">
+        <div class="p-media mask" data-cursor="Open" data-toggle="p2"><img data-art="door" alt="Abstract plate: a doorway diagram with sensor field and sanitising spray pattern" data-speed=".05"></div>
+        <div class="p-info">
+          <div class="p-top"><span class="p-num">P/02</span><span class="meta dim">IoT · Embedded · Public health</span></div>
+          <h3 class="p-title">SmartZ</h3>
+          <p class="p-sub">A self-sanitising smart door that automates COVID-19 safety protocols at entrances.</p>
+          <dl class="p-meta">
+            <div><dt class="meta dim">Deployment</dt><dd class="big">150 sites</dd><dd class="meta dim">Bengaluru · per his profile</dd></div>
+            <div><dt class="meta dim">Timeline</dt><dd>Mar 2021 — Aug 2021</dd></div>
+          </dl>
+          <button class="btn p-toggle magnetic" aria-expanded="false" aria-controls="p2-more"><span class="lbl">Project details</span><span class="arr">→</span></button>
+          <div class="p-more" id="p2-more"><div>
+            <ul class="dash" style="margin-top:6px">
+              <li>Designed a self-sanitising smart door to automate COVID-19 safety protocols at entrances.</li>
+              <li>Deployed in 150 establishments across Bengaluru, according to his profile.</li>
+              <li>Presented “SmartZ COVID-19 Smart Door” at the 2021 IEEE International Conference on Computational Systems and Information Technology for Sustainable Solutions (CSITSS); published in connection with the conference in December 2021.</li>
+            </ul>
+            <ul class="tags"><li>IoT</li><li>Embedded systems</li><li>Automation</li><li>IEEE CSITSS 2021</li></ul>
+          </div></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- EDUCATION -->
+<div class="chapter" id="education" data-num="05" data-name="Education">
+<section class="sec dark" aria-labelledby="edu-h">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="sec-num rv" aria-hidden="true">05</span>
+      <div>
+        <p class="sec-kicker meta rv"><span class="ac">[05 / Education]</span><span class="dim">Engineering, then management</span></p>
+        <h2 class="h2 split" id="edu-h">Two<br>disciplines<i class="dot"></i></h2>
+      </div>
+    </header>
+
+    <article class="edu rv">
+      <div class="edu-y"><b>2023</b><span class="meta dim">Aug 2023 — Dec 2024</span></div>
+      <div class="edu-main">
+        <p class="meta ac">Master of Engineering (MEng)</p>
+        <h3>Cornell University</h3>
+        <p>Engineering / Industrial Management.</p>
+      </div>
+      <div class="edu-side"><span class="num">MEng</span><p class="meta dim">Engineering Management</p></div>
+    </article>
+
+    <article class="edu rv">
+      <div class="edu-y"><b>2018</b><span class="meta dim">2018 — 2022</span></div>
+      <div class="edu-main">
+        <p class="meta ac">Bachelor of Engineering (BE)</p>
+        <h3>RV College of Engineering</h3>
+        <p>Computer Science, Bengaluru.</p>
+      </div>
+      <div class="edu-side"><span class="num" data-count="9.63" data-dec="2">9.63</span><p class="meta dim">CGPA (reported)</p></div>
+    </article>
+
+    <div class="fellow">
+      <div class="fellow-ring" aria-hidden="true">
+        <svg viewBox="0 0 400 400"><circle class="bg" cx="200" cy="200" r="180"/><circle class="fg" cx="200" cy="200" r="180"/><circle cx="200" cy="200" r="140" fill="none" stroke="rgba(237,235,229,.08)"/></svg>
+        <div class="val"><b>$37,500</b><span class="meta dim">Financial assistance</span></div>
+      </div>
+      <div class="fellow-copy rv">
+        <p class="meta ac">Award · March 2023</p>
+        <h3>Engineering Management Fellowship</h3>
+        <p>Awarded by Cornell University ahead of his MEng, offering $37,500 in financial assistance, according to his profile.</p>
+      </div>
+    </div>
+
+    <div class="vol">
+      <p class="meta dim rv">05.B — Volunteering<br>Jun 2021 — Oct 2021</p>
+      <h3 class="rv">CRY — Child Rights and You</h3>
+      <p class="rv">Led social media outreach and fundraising campaigns supporting educational opportunities for underprivileged children in India.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="sec" aria-labelledby="sk-h">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="sec-num rv" aria-hidden="true">S</span>
+      <div>
+        <p class="sec-kicker meta rv"><span class="ac">[05.C / Strengths]</span><span class="dim">Twelve areas of expertise</span></p>
+        <h2 class="h2 split" id="sk-h">What I<br>bring<i class="dot"></i></h2>
+      </div>
+    </header>
+    <div class="sk-grid">
+      <div class="sk-col rv" style="--d:0"><h3 class="meta"><span>Build</span><span class="dim">01—04</span></h3><ul>
+        <li><span class="meta">01</span><span>Software development</span></li>
+        <li><span class="meta">02</span><span>Product development</span></li>
+        <li><span class="meta">03</span><span>IoT &amp; embedded systems</span></li>
+        <li><span class="meta">04</span><span>Machine learning</span></li></ul></div>
+      <div class="sk-col rv" style="--d:1"><h3 class="meta"><span>Lead</span><span class="dim">05—08</span></h3><ul>
+        <li><span class="meta">05</span><span>Entrepreneurship</span></li>
+        <li><span class="meta">06</span><span>Engineering management</span></li>
+        <li><span class="meta">07</span><span>Cross-functional leadership</span></li>
+        <li><span class="meta">08</span><span>Agile methodologies</span></li></ul></div>
+      <div class="sk-col rv" style="--d:2"><h3 class="meta"><span>Connect</span><span class="dim">09—12</span></h3><ul>
+        <li><span class="meta">09</span><span>Community building</span></li>
+        <li><span class="meta">10</span><span>Event organisation</span></li>
+        <li><span class="meta">11</span><span>Team building</span></li>
+        <li><span class="meta">12</span><span>Technical problem-solving</span></li></ul></div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- CONTACT -->
+<div class="chapter" id="contact" data-num="06" data-name="Contact">
+<section class="sec dark" aria-labelledby="contact-h">
+  <div class="wrap">
+    <p class="sec-kicker meta rv"><span class="ac">[06 / Connect]</span><span class="dim">Collaboration · Community · Partnerships</span></p>
+    <h2 class="contact-title split" id="contact-h">Find<br>your<br>circle<i class="dot"></i></h2>
+
+    <div class="contact-grid">
+      <div>
+        <p class="contact-lead rv">Building a community, hosting an event or interested in what Circles IN is doing? Reach out through Circles IN.</p>
+        <p class="meta dim rv">Based in Bengaluru, Karnataka, India</p>
+      </div>
+      <div class="links">
+        <a class="lk rv" href="https://www.circlesinapp.com" target="_blank" rel="noopener" data-cursor="Visit"><span class="meta dim">Company website</span><b>circlesinapp.com</b><span class="go" aria-hidden="true">↗</span></a>
+        <a class="lk rv" href="https://www.instagram.com/circlesin_app/" target="_blank" rel="noopener" data-cursor="Follow"><span class="meta dim">Instagram — Circles IN</span><b>@circlesin_app</b><span class="go" aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+</main>
+
+<footer class="footer">
+  <div class="f-cols">
+    <div class="rv"><h3 class="meta dim">Navigation</h3><ul>
+      <li><a class="ul" href="#about">01 About</a></li><li><a class="ul" href="#circles">02 Circles IN</a></li><li><a class="ul" href="#experience">03 Experience</a></li>
+      <li><a class="ul" href="#work">04 Projects</a></li><li><a class="ul" href="#education">05 Education</a></li><li><a class="ul" href="#contact">06 Contact</a></li></ul></div>
+    <div class="rv" style="--d:1"><h3 class="meta dim">Circles IN</h3><ul>
+      <li><a class="ul" href="https://www.circlesinapp.com" target="_blank" rel="noopener">Website ↗</a></li>
+      <li><a class="ul" href="https://www.instagram.com/circlesin_app/" target="_blank" rel="noopener">Instagram ↗</a></li></ul></div>
+    <div class="rv" style="--d:2"><h3 class="meta dim">Based in</h3><ul><li>Bengaluru</li><li>Karnataka, India</li></ul></div>
+    <div class="f-top rv" style="--d:3"><button class="to-top magnetic" data-top data-strength=".4">Top ↑</button></div>
+  </div>
+  <div class="f-mega-wrap">
+    <span class="f-mega" data-fit="full" aria-label="Sathvik">Sathvik</span>
+  </div>
+  <div class="f-bottom meta">
+    <span>© <span data-year>2026</span> Sathvik Chidanand</span>
+    <span class="dim">Founder &amp; CEO — Circles IN</span>
+    <button class="ul" data-top>Back to top ↑</button>
+  </div>
+</footer>
+
+<script>
+(() => {
+'use strict';
+
+const $ = (s, c = document) => c.querySelector(s);
+const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+const html = document.documentElement;
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const FINE = matchMedia('(hover: hover) and (pointer: fine)').matches;
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const lerp = (a, b, t) => a + (b - a) * t;
+const pad = (n, l = 2) => String(n).padStart(l, '0');
+
+/* Failsafe: never leave content hidden if something below throws */
+const failsafe = setTimeout(() => { html.classList.add('loaded'); $$('.rv,.rv-x,.rv-s,.split,.mask,.exp,.fellow,.f-mega-wrap').forEach(e => e.classList.add('in')); const l = $('.loader'); if (l) l.remove(); }, 6000);
+
+/* =========================================================
+   PROCEDURAL PLATES (inline SVG — no image files)
+   ========================================================= */
+const BG = '#121214', FG = '#EDEBE5', AC = '#8E8DFF';
+const MONO = 'ui-monospace,Menlo,Consolas,monospace';
+const svg = inner => 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 825" width="1200" height="825"><rect width="1200" height="825" fill="${BG}"/>${inner}</svg>`);
+const f1 = n => n.toFixed(1);
+const label = (x, y, t, c = FG, s = 18) => `<text x="${x}" y="${y}" font-family="${MONO}" font-size="${s}" fill="${c}" letter-spacing="2">${t}</text>`;
+const ART = {
+  vitals(){
+    let p = '';
+    for (let x = 0; x <= 1200; x += 40) p += `<line x1="${x}" y1="0" x2="${x}" y2="825" stroke="${FG}" stroke-opacity=".05"/>`;
+    for (let y = 0; y <= 825; y += 40) p += `<line x1="0" y1="${y}" x2="1200" y2="${y}" stroke="${FG}" stroke-opacity=".05"/>`;
+    const rows = [[170, 'CH-01', 1], [330, 'CH-02', 0], [490, 'CH-03', 0]];
+    rows.forEach(([y0, name, hi]) => {
+      let d = `M60 ${y0}`;
+      for (let x = 60; x <= 820; x += 4) {
+        const t = (x - 60) % 190; let v;
+        if (name === 'CH-01') v = t > 80 && t < 92 ? -95 * Math.sin((t - 80) / 12 * Math.PI) : t > 92 && t < 100 ? 30 : 6 * Math.sin(x * .05);
+        else if (name === 'CH-02') v = 34 * Math.sin(x * .028) + 8 * Math.sin(x * .11);
+        else v = 26 * Math.sin(x * .016) * Math.cos(x * .007);
+        d += ` L${x} ${f1(y0 + v)}`;
+      }
+      p += `<path d="${d}" fill="none" stroke="${hi ? AC : FG}" stroke-width="${hi ? 3.5 : 2.5}" stroke-linejoin="round"/>` + label(60, y0 - 70, name, hi ? AC : FG, 16);
+    });
+    // risk matrix
+    const cx = 880, cy = 120, s = 64;
+    for (let i = 0; i < 4; i++) for (let j = 0; j < 4; j++) {
+      const lvl = (i + (3 - j)) / 6;
+      p += `<rect x="${cx + i * s}" y="${cy + j * s}" width="${s - 6}" height="${s - 6}" fill="${lvl > .66 ? AC : FG}" fill-opacity="${(.1 + lvl * .55).toFixed(2)}"/>`;
+    }
+    p += label(cx, cy - 18, 'RISK MATRIX', FG, 16);
+    [[.3, 'BAR A'], [.7, 'BAR B'], [.5, 'BAR C'], [.85, 'BAR D']].forEach(([v, n], k) => { p += `<rect x="${cx + k * s}" y="${f1(720 - v * 300)}" width="${s - 18}" height="${f1(v * 300)}" fill="${k === 3 ? AC : FG}" fill-opacity="${k === 3 ? 1 : .6}"/>`; });
+    p += `<line x1="${cx - 10}" y1="720" x2="${cx + 4 * s}" y2="720" stroke="${FG}" stroke-opacity=".4"/>`;
+    return p + label(60, 780, 'CONTINUOUS MONITORING / 03 CH');
+  },
+  door(){
+    let p = '';
+    for (let x = 0; x <= 1200; x += 40) p += `<line x1="${x}" y1="0" x2="${x}" y2="825" stroke="${FG}" stroke-opacity=".05"/>`;
+    p += `<line x1="0" y1="700" x2="1200" y2="700" stroke="${FG}" stroke-opacity=".5" stroke-width="2"/>`;
+    // frame
+    p += `<rect x="440" y="120" width="320" height="580" fill="none" stroke="${FG}" stroke-width="4"/>`;
+    p += `<rect x="460" y="140" width="138" height="560" fill="${FG}" fill-opacity=".06" stroke="${FG}" stroke-opacity=".6" stroke-width="2"/><rect x="602" y="140" width="138" height="560" fill="${FG}" fill-opacity=".06" stroke="${FG}" stroke-opacity=".6" stroke-width="2"/>`;
+    // sensor and field
+    p += `<rect x="580" y="96" width="40" height="22" fill="${AC}"/>`;
+    for (let k = 1; k < 6; k++) p += `<path d="M600 118 L${600 - k * 70} 700 M600 118 L${600 + k * 70} 700" stroke="${AC}" stroke-opacity="${(.5 - k * .07).toFixed(2)}" stroke-dasharray="6 10"/>`;
+    // spray nozzles
+    [[470, 160], [730, 160]].forEach(([x, y], s) => {
+      p += `<circle cx="${x}" cy="${y}" r="9" fill="${AC}"/>`;
+      for (let i = 0; i < 70; i++) { const a = (s ? Math.PI * .6 : Math.PI * .1) + Math.random() * Math.PI * .3, r = 30 + Math.random() * 300; p += `<circle cx="${f1(x + Math.cos(a) * r)}" cy="${f1(y + Math.sin(a) * r)}" r="${f1(1.5 + Math.random() * 2)}" fill="${FG}" fill-opacity="${(.15 + Math.random() * .5).toFixed(2)}"/>`; }
+    });
+    // person silhouette marker
+    p += `<circle cx="210" cy="480" r="34" fill="none" stroke="${FG}" stroke-width="3"/><path d="M150 700 Q150 540 210 540 Q270 540 270 700" fill="none" stroke="${FG}" stroke-width="3"/>`;
+    p += `<path d="M300 600 L400 600" stroke="${AC}" stroke-width="3"/><path d="M388 590 L402 600 L388 610" fill="none" stroke="${AC}" stroke-width="3"/>`;
+    p += label(820, 210, 'SENSE', AC, 18) + label(820, 245, 'SANITISE', FG, 18) + label(820, 280, 'OPEN', FG, 18);
+    return p + label(60, 780, 'SMART ENTRANCE / AUTOMATED PROTOCOL');
+  }
+};
+$$('img[data-art]').forEach(img => { if (!img.getAttribute('src') && ART[img.dataset.art]) img.src = svg(ART[img.dataset.art]()); });
+
+/* =========================================================
+   TEXT SPLITTING
+   ========================================================= */
+$$('.split').forEach(el => {
+  let i = 0;
+  const joiner = el.classList.contains('contact-title') ? '' : '<br>';
+  el.innerHTML = el.innerHTML.split(/<br\s*\/?>/i).map(part =>
+    part.trim().split(/\s+(?![^<]*>)/).filter(Boolean).map(w => `<span class="w"><span class="wi" style="--i:${i++}">${w}</span></span>`).join(' ')
+  ).join(joiner);
+});
+const mega = $('.f-mega');
+if (mega) mega.innerHTML = [...mega.textContent].map((c, i) => `<span class="ch" aria-hidden="true" style="--i:${i}">${c}</span>`).join('');
+
+/* =========================================================
+   FIT TEXT
+   ========================================================= */
+function fitAll(){
+  const hero = $$('[data-fit="hero"]');
+  if (hero.length) {
+    hero.forEach(e => e.style.fontSize = '100px');
+    const name = $('.hero-name'), ln2 = $('.ln-2');
+    const indent = parseFloat(getComputedStyle(ln2).paddingLeft) || 0;
+    const w = Math.max(hero[0].getBoundingClientRect().width, hero[1].getBoundingClientRect().width + indent * 0);
+    const avail = name.clientWidth - indent;
+    let fs = 100 * avail / Math.max(hero[1].getBoundingClientRect().width, hero[0].getBoundingClientRect().width) * .98;
+    fs = Math.min(fs, innerHeight * (innerWidth < 700 ? .17 : .27));
+    hero.forEach(e => e.style.fontSize = fs + 'px');
+  }
+  $$('[data-fit="full"]').forEach(e => { e.style.fontSize = '100px'; const w = e.getBoundingClientRect().width; e.style.fontSize = (100 * e.parentElement.clientWidth / w * .99) + 'px'; });
+}
+fitAll();
+if (document.fonts) document.fonts.ready.then(() => { fitAll(); hsSetup(); });
+
+/* =========================================================
+   LOADER
+   ========================================================= */
+const loader = $('.loader');
+let loadedOnce = false;
+function finishLoad(){
+  if (loadedOnce) return; loadedOnce = true;
+  html.classList.add('loaded');
+  if (loader) { loader.classList.add('done'); setTimeout(() => loader.remove(), 1300); }
+}
+if (!loader || RM) { loader && loader.remove(); requestAnimationFrame(finishLoad); }
+else {
+  const cnt = $('.loader-count'), ring = $('.loader-ring .fg'); const t0 = performance.now(); let fontsOk = !document.fonts;
+  if (document.fonts) document.fonts.ready.then(() => fontsOk = true);
+  (function tick(t){ const n = Math.min(100, Math.floor((t - t0) / 9)); cnt.textContent = pad(n, 3); if (ring) ring.style.strokeDashoffset = 189 * (1 - n / 100); if ((n >= 100 && fontsOk) || t - t0 > 2400) finishLoad(); else requestAnimationFrame(tick); })(t0);
+}
+
+/* =========================================================
+   REVEALS + COUNTERS
+   ========================================================= */
+function runCount(el){
+  const to = parseFloat(el.dataset.count), dec = +(el.dataset.dec || 0);
+  const fmt = v => v.toFixed(dec);
+  if (RM) { el.textContent = fmt(to); return; }
+  const t0 = performance.now(), dur = 1600;
+  (function f(t){ const p = clamp((t - t0) / dur, 0, 1), e = p === 1 ? 1 : 1 - Math.pow(2, -10 * p); el.textContent = fmt(to * e); if (p < 1) requestAnimationFrame(f); })(t0);
+}
+if (!RM) $$('[data-count]').forEach(el => el.textContent = (0).toFixed(+(el.dataset.dec || 0)));
+
+const io = new IntersectionObserver(entries => entries.forEach(e => {
+  if (!e.isIntersecting) return;
+  e.target.classList.add('in'); io.unobserve(e.target);
+  if (e.target.hasAttribute('data-count')) runCount(e.target);
+}), { rootMargin: '0px 0px -8% 0px', threshold: .12 });
+$$('.rv,.rv-x,.rv-s,.split,.exp,.fellow,.f-mega-wrap,[data-count]').forEach(el => io.observe(el));
+const mio = new IntersectionObserver(entries => entries.forEach(e => {
+  if (!e.isIntersecting) return;
+  $$('.mask', e.target).forEach(m => m.classList.add('in'));
+  mio.unobserve(e.target);
+}), { rootMargin: '0px 0px -8% 0px', threshold: .05 });
+$$('.project').forEach(el => mio.observe(el));
+
+/* =========================================================
+   NAV: active section, progress, side counter
+   ========================================================= */
+const navLinks = $$('.nav ol a');
+const scNum = $('.sc-num'), scName = $('.sc-name'), scBar = $('.sc-bar i'), progress = $('.progress');
+function setActive(id, num, name){
+  navLinks.forEach(a => a.setAttribute('aria-current', a.dataset.nav === id ? 'true' : 'false'));
+  if (scNum) { scNum.textContent = num; scName.textContent = name; }
+  html.classList.toggle('at-top', id === 'top');
+  html.classList.toggle('on-cobalt', id === 'circles');
+}
+const chapters = [{ el: $('#top'), id: 'top', num: '00', name: 'Intro' }, ...$$('.chapter').map(el => ({ el, id: el.id, num: el.dataset.num, name: el.dataset.name }))];
+const nio = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { const c = chapters.find(c => c.el === e.target); if (c) setActive(c.id, c.num, c.name); } }), { rootMargin: '-50% 0px -50% 0px' });
+chapters.forEach(c => c.el && nio.observe(c.el));
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+const menuBtn = $('.menu-btn'), menu = $('#menu');
+function setMenu(open, restoreFocus = true){
+  html.classList.toggle('menu-open', open);
+  menuBtn.setAttribute('aria-expanded', String(open));
+  $('.mb-t', menuBtn).textContent = open ? 'Close' : 'Menu';
+  menu.setAttribute('aria-hidden', String(!open));
+  ['main', 'footer', '.brand'].forEach(s => { const e = $(s); if (e) e.inert = open; });
+  if (open) setTimeout(() => { const a = $('a', menu); a && a.focus({ preventScroll: true }); }, 350);
+  else if (restoreFocus) menuBtn.focus({ preventScroll: true });
+}
+menuBtn.addEventListener('click', () => setMenu(!html.classList.contains('menu-open')));
+$$('a', menu).forEach(a => a.addEventListener('click', () => setMenu(false, false)));
+document.addEventListener('keydown', e => {
+  if (!html.classList.contains('menu-open')) return;
+  if (e.key === 'Escape') setMenu(false);
+  else if (e.key === 'Tab') {
+    const f = [menuBtn, ...$$('a', menu)], a = f[0], b = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === a) { e.preventDefault(); b.focus(); }
+    else if (!e.shiftKey && document.activeElement === b) { e.preventDefault(); a.focus(); }
+  }
+});
+addEventListener('resize', () => { if (innerWidth > 1180 && html.classList.contains('menu-open')) setMenu(false, false); });
+
+/* =========================================================
+   CURSOR + MAGNETIC (desktop fine pointers only)
+   ========================================================= */
+if (FINE) {
+  html.classList.add('has-cursor');
+  const cur = $('.cursor'), dot = $('.c-dot'), ring = $('.c-ring'), lab = $('.c-label');
+  let x = -200, y = -200, rx = -200, ry = -200;
+  addEventListener('mousemove', e => { x = e.clientX; y = e.clientY; dot.style.translate = `${x}px ${y}px`; cur.classList.add('vis'); }, { passive: true });
+  document.addEventListener('mouseleave', () => cur.classList.remove('vis'));
+  document.addEventListener('mouseover', e => {
+    const t = e.target.closest('[data-cursor]'), l = e.target.closest('a,button,[role="button"]');
+    cur.classList.toggle('labeled', !!t);
+    cur.classList.toggle('link', !t && !!l);
+    if (t) lab.textContent = t.dataset.cursor;
+  });
+  (function loop(){ rx = lerp(rx, x, RM ? 1 : .18); ry = lerp(ry, y, RM ? 1 : .18); ring.style.translate = `${rx}px ${ry}px`; requestAnimationFrame(loop); })();
+
+  if (!RM) $$('.magnetic').forEach(el => {
+    const s = +(el.dataset.strength || .3);
+    el.addEventListener('mousemove', e => { const r = el.getBoundingClientRect(); el.style.translate = `${(e.clientX - r.left - r.width / 2) * s}px ${(e.clientY - r.top - r.height / 2) * s}px`; });
+    el.addEventListener('mouseleave', () => el.style.translate = '0 0');
+  });
+  if (!RM) $$('.p-media').forEach(m => {
+    const img = $('img', m);
+    m.addEventListener('mousemove', e => { const r = m.getBoundingClientRect(); img.style.setProperty('--mx', ((e.clientX - r.left) / r.width - .5).toFixed(3)); img.style.setProperty('--my', ((e.clientY - r.top) / r.height - .5).toFixed(3)); });
+    m.addEventListener('mouseleave', () => { img.style.setProperty('--mx', 0); img.style.setProperty('--my', 0); });
+  });
+}
+
+/* =========================================================
+   HERO CANVAS — "find your circle": a dot field that gathers
+   into concentric rings around a drifting (or mouse-led) focus
+   ========================================================= */
+(() => {
+  const cv = $('.hero-canvas'); if (!cv) return;
+  const ctx = cv.getContext('2d'), hero = cv.parentElement, rr = $('[data-r]'), rn = $('[data-n]');
+  let W = 0, H = 0, pts = [], mx = 0, my = 0, sx = 0, sy = 0, hasMouse = false, run = false, frame = 0; const t0 = performance.now();
+  const mobile = () => innerWidth < 700;
+  function size(){
+    const d = Math.min(devicePixelRatio || 1, 2); W = hero.clientWidth; H = hero.clientHeight;
+    cv.width = W * d; cv.height = H * d; ctx.setTransform(d, 0, 0, d, 0, 0);
+    const s = mobile() ? 26 : 30; pts = [];
+    for (let y = s * .5; y < H; y += s) for (let x = s * .5; x < W; x += s) pts.push(x, y);
+    if (!sx) { sx = mx = W * .7; sy = my = H * .42; }
+    draw(performance.now());
+  }
+  hero.addEventListener('pointermove', e => { if (e.pointerType !== 'mouse') return; const r = hero.getBoundingClientRect(); mx = e.clientX - r.left; my = e.clientY - r.top; hasMouse = true; });
+  hero.addEventListener('pointerleave', () => hasMouse = false);
+  function draw(t){
+    const time = (t - t0) / 1000;
+    if (!hasMouse) { mx = W * (.66 + .14 * Math.sin(time * .3)); my = H * (.42 + .16 * Math.sin(time * .45 + 1)); }
+    sx = lerp(sx, mx, RM ? 1 : .07); sy = lerp(sy, my, RM ? 1 : .07);
+    ctx.clearRect(0, 0, W, H);
+    const R = Math.max(120, Math.min(W, H) * .3), gap = mobile() ? 30 : 38, breathe = 1 + .04 * Math.sin(time * 1.4);
+    let inCircle = 0;
+    for (let i = 0; i < pts.length; i += 2) {
+      const x = pts[i], y = pts[i + 1], dx = x - sx, dy = y - sy, d = Math.sqrt(dx * dx + dy * dy) || 1;
+      const f = clamp(1 - d / R, 0, 1), e = f * f * (3 - 2 * f);
+      let px = x, py = y, a = .12, s = 1.4, hot = false;
+      if (e > 0) {
+        const ring = Math.max(1, Math.round(d / (gap * breathe))) * gap * breathe;
+        const nd = lerp(d, ring, e * .92);
+        px = sx + dx / d * nd; py = sy + dy / d * nd;
+        a = .12 + e * .8; s = 1.4 + e * 1.8; hot = e > .55 && Math.round(d / (gap * breathe)) === 2;
+        if (e > .4) inCircle++;
+      }
+      ctx.fillStyle = hot ? `rgba(142,141,255,${a})` : `rgba(237,235,229,${a})`;
+      ctx.beginPath(); ctx.arc(px, py, s, 0, 6.2832); ctx.fill();
+    }
+    ctx.strokeStyle = 'rgba(142,141,255,.5)'; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.arc(sx, sy, gap * 2 * breathe, 0, 6.2832); ctx.stroke();
+    ctx.strokeStyle = 'rgba(237,235,229,.08)';
+    ctx.beginPath(); ctx.arc(sx, sy, R, 0, 6.2832); ctx.stroke();
+    ctx.fillStyle = '#8E8DFF'; ctx.beginPath(); ctx.arc(sx, sy, 4, 0, 6.2832); ctx.fill();
+    if (rr && (++frame % 8 === 0)) { rr.textContent = (gap * 2 * breathe / Math.max(W, 1)).toFixed(3); rn.textContent = pad(inCircle); }
+  }
+  function loop(t){ if (!run) return; draw(t); requestAnimationFrame(loop); }
+  new IntersectionObserver(([e]) => { const was = run; run = e.isIntersecting && !RM; if (run && !was) requestAnimationFrame(loop); }).observe(hero);
+  size(); let rT; addEventListener('resize', () => { clearTimeout(rT); rT = setTimeout(size, 150); });
+})();
+
+/* =========================================================
+   MARQUEE (scroll-velocity aware)
+   ========================================================= */
+(() => {
+  const tr = $('.marquee-track'); if (!tr || RM) return;
+  tr.innerHTML = tr.innerHTML + tr.innerHTML + tr.innerHTML;
+  let x = 0, last = performance.now(), boost = 0, lastY = scrollY, vis = false;
+  new IntersectionObserver(([e]) => vis = e.isIntersecting).observe(tr);
+  addEventListener('scroll', () => { boost += Math.abs(scrollY - lastY) * .04; lastY = scrollY; }, { passive: true });
+  (function loop(t){
+    const dt = Math.min(64, t - last); last = t; boost = lerp(boost, 0, .06);
+    if (vis) { const w = tr.scrollWidth / 3; x -= (.06 + Math.min(boost, 2)) * dt; if (-x >= w) x += w; tr.style.transform = `translate3d(${x}px,0,0)`; }
+    requestAnimationFrame(loop);
+  })(last);
+})();
+
+/* =========================================================
+   HIGHLIGHTS — pinned horizontal on desktop, native swipe on touch
+   ========================================================= */
+const hsO = $('.hs-outer'), hsT = $('.hs-track'), hsV = $('.hs-viewport'), hsBar = $('.hs-progress i');
+let hsDist = 0, hsOn = false;
+function hsSetup(){
+  if (!hsO) return;
+  hsOn = !RM && innerWidth >= 900 && FINE;
+  hsT.style.transform = '';
+  if (hsOn) { hsDist = Math.max(0, hsT.offsetWidth - innerWidth); hsO.style.height = (hsDist + innerHeight) + 'px'; hsO.classList.add('pinned'); }
+  else { hsO.style.height = ''; hsO.classList.remove('pinned'); }
+}
+function hsUpdate(){
+  if (!hsOn) return;
+  const r = hsO.getBoundingClientRect(), p = clamp(-r.top / Math.max(1, hsO.offsetHeight - innerHeight), 0, 1);
+  hsT.style.transform = `translate3d(${(-p * hsDist).toFixed(1)}px,0,0)`;
+  if (hsBar) hsBar.style.transform = `scaleX(${p})`;
+}
+hsSetup();
+
+/* =========================================================
+   SCROLL LOOP
+   ========================================================= */
+const growLines = $$('[data-grow]'), parallax = (RM || !FINE) ? [] : $$('[data-speed]');
+let ticking = false;
+function onScroll(){
+  ticking = false;
+  const max = document.documentElement.scrollHeight - innerHeight, p = max > 0 ? scrollY / max : 0;
+  progress.style.transform = `scaleX(${p})`;
+  if (scBar) scBar.style.transform = `scaleX(${p})`;
+  hsUpdate();
+  if (!RM) growLines.forEach(l => { const r = l.parentElement.getBoundingClientRect(); l.style.transform = `scaleY(${clamp((innerHeight * .65 - r.top) / r.height, 0, 1)})`; });
+  parallax.forEach(el => {
+    const r = el.parentElement.getBoundingClientRect();
+    if (r.bottom < -200 || r.top > innerHeight + 200) return;
+    el.style.setProperty('--py', ((r.top + r.height / 2 - innerHeight / 2) * -(+el.dataset.speed)).toFixed(1) + 'px');
+  });
+}
+addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+let rsT; addEventListener('resize', () => { clearTimeout(rsT); rsT = setTimeout(() => { fitAll(); hsSetup(); onScroll(); }, 120); });
+onScroll();
+if (hsV) hsV.addEventListener('scroll', () => { if (hsOn || !hsBar) return; hsBar.style.transform = `scaleX(${hsV.scrollLeft / Math.max(1, hsV.scrollWidth - hsV.clientWidth)})`; }, { passive: true });
+
+/* =========================================================
+   PROJECT ACCORDIONS
+   ========================================================= */
+function toggleProject(pr, force){
+  const open = force ?? !pr.classList.contains('open'), btn = $('.p-toggle', pr);
+  pr.classList.toggle('open', open); btn.setAttribute('aria-expanded', String(open));
+  $('.lbl', btn).textContent = open ? 'Close details' : 'Project details';
+}
+$$('.project').forEach(pr => {
+  $('.p-toggle', pr).addEventListener('click', () => toggleProject(pr));
+  $('.p-media', pr).addEventListener('click', () => toggleProject(pr, true));
+});
+
+/* =========================================================
+   MISC
+   ========================================================= */
+$$('[data-top]').forEach(b => b.addEventListener('click', () => scrollTo({ top: 0, behavior: RM ? 'auto' : 'smooth' })));
+$$('[data-year]').forEach(e => e.textContent = new Date().getFullYear());
+clearTimeout(failsafe);
+setTimeout(() => { if (!loadedOnce) finishLoad(); }, 3500);
+})();
+</script>
+</body>
+</html>
